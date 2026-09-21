@@ -81,7 +81,7 @@ The following market and deployment information is aggregated from publicly avai
 
 **Descriptions:**
 
-Internal Marking | Associated CVE | CVE Description | CVSS3.1 
+Internal Marking | Associated CVE | CVE Description | Recommended CVSS3.1 
 -|-|-|-
 REVRB-LANTERN-01 | CVE-2026-80143 | An attacker that can authenticate as any user to the terminal/CLI of Lantronix Autonomous Out-of-Band devices can execute shell commands as root. This can cause complete loss of confidentiality, integrity, and availability for the affected device with the potential to impact downstream serial-attached devices. | 9.9/Critical
 REVRB-LANTERN-02 | CVE-2026-80144 | An attacker that can authenticate as any user to the terminal/CLI of Lantronix Autonomous Out-of-Band devices can execute shell commands as root. This can cause complete loss of confidentiality, integrity, and availability for the affected device with the potential to impact downstream serial-attached devices. | 9.9/Critical
