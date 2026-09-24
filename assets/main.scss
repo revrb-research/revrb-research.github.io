@@ -3,12 +3,6 @@
 
 @import "minima";
 
-// ============================================================
-// Custom RE/VRb theming (add overrides below the import)
-// ============================================================
-
-// Additional top margin above headings in post/page content
-//.post-content h1,
 .post-content h2,
 .post-content h3,
 .post-content h4,
@@ -17,26 +11,17 @@
   margin-top: 2em;
 }
 
-// ============================================================
-// Blockquotes — used for factual updates on the blog
-// (e.g. "> **Update, 09/24/2026:** ...")
-// Styled as an attention-grabbing callout instead of the
-// theme's subdued gray quote. Placed after the minima import
-// so these rules win the cascade.
-// ============================================================
 blockquote.update {
-  color: $text-color;                   // dark text, not the theme's light gray
-  font-style: normal;                   // updates read better upright than italic
-  letter-spacing: normal;               // undo the theme's -1px
-  border-left: 6px solid #e8590c;       // bold orange accent
-  background-color: #fff4e6;            // soft warm tint
+  color: $text-color;
+  font-style: normal;
+  letter-spacing: normal;
+  border-left: 6px solid #e8590c;
+  background-color: #fff4e6;
   border-radius: 0 4px 4px 0;
   padding: 0.9em 1.1em;
   margin: 1.5em 0;
   font-size: 1em;
 
-  // Small "Update" tag rendered above the quoted text.
-  // Delete this block if you prefer no label.
   &::before {
     content: "Update";
     display: block;
