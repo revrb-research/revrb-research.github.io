@@ -16,3 +16,39 @@
 .post-content h6 {
   margin-top: 2em;
 }
+
+// ============================================================
+// Blockquotes — used for factual updates on the blog
+// (e.g. "> **Update, 09/24/2026:** ...")
+// Styled as an attention-grabbing callout instead of the
+// theme's subdued gray quote. Placed after the minima import
+// so these rules win the cascade.
+// ============================================================
+blockquote.update {
+  color: $text-color;                   // dark text, not the theme's light gray
+  font-style: normal;                   // updates read better upright than italic
+  letter-spacing: normal;               // undo the theme's -1px
+  border-left: 6px solid #e8590c;       // bold orange accent
+  background-color: #fff4e6;            // soft warm tint
+  border-radius: 0 4px 4px 0;
+  padding: 0.9em 1.1em;
+  margin: 1.5em 0;
+  font-size: 1em;
+
+  // Small "Update" tag rendered above the quoted text.
+  // Delete this block if you prefer no label.
+  &::before {
+    content: "Update";
+    display: block;
+    font-size: 0.7em;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: #d9480f;
+    margin-bottom: 0.4em;
+  }
+
+  > :last-child {
+    margin-bottom: 0;
+  }
+}

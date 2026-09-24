@@ -20,6 +20,7 @@ Per Lantronix, the reported CVEs are addressed in recent patches (v9.7.0.5 for t
 
 The following devices were confirmed to be vulnerable to one or more of the findings detailed below:
 
+- Lantronix SLC9000[^ltrx-advisories]
 - Lantronix SLC8000
 - Lantronix EMG8500
 - Lantronix EMG7500
@@ -29,14 +30,16 @@ The following devices were confirmed to be vulnerable to one or more of the find
 
 Additionally, we asked Lantronix about the applicability of our findings to the newly released SLC9000, which we assessed may share portions of the same codebase as the devices listed above. Despite multiple requests, Lantronix did not confirm or deny our findings against the SLC9000, and asked that we "refrain from mentioning it in [our] publication." Our findings concerning the SLC9000 can be found below. If you own an SLC9000 and would like to coordinate further research, please reach out to research@revrb.net.
 
-We recommend SLC9000 owners review the 18 September 2026 firmware update, which Lantronix published citing security vulnerabilities, reach out to Lantronix support with any questions about said vulnerabilities, and apply where appropriate.
+{:.update}
+> **24 Sep 2026:** Lantronix, in their vulnerability library, added the SLC9000 Series under "affected products" for all vulnerabilities disclosed here except for CVE-2018-16789, which we assessed was unlikely to apply to the SLC9000. Our findings concerning the SLC9000, which allowed us to seemingly correctly correlate vulnerabilities to it, remains in the article, as we feel it reflects important information regarding the research performed.
 
-SLC8000 owners and owners of EMG-series devices are recommended to patch their devices as soon as possible to obtain available remediations and to adopt/continue defense-in-depth and strong network monitoring practices to respond to yet-unknown vulnerabilities.
+SLC9000 owners, SLC8000 owners, and owners of EMG-series devices are recommended to patch as soon as possible to obtain available remediations and to adopt/continue defense-in-depth and strong network monitoring practices to respond to yet-unknown vulnerabilities.
 
 Owners of SLB-series devices are recommended to disconnect or layer defenses over their SLBs and to reach out to Lantronix concerning patch availability; Lantronix's product discontinuation notice indicates warranty and software support through 31 December 2028[^slb-eol], but no patch appears to have been made available.
 
 Owners of SLCx-02 and SLCx-03 devices are recommended to decommission these devices, as they are end-of-support and no patch is expected to be made available.
 
+[^ltrx-advisories]: Lantronix, [*Vulnerability Library*](https://www.lantronix.com/technical-support/security-matters/vulnerability-library/)
 [^slb-eol]: Lantronix, [*Product Discontinuation Notice - December 18, 2023*](https://cdn.lantronix.com/wp-content/uploads/pdf/PCN-881-SLB-PRODUCT-FAMILY-DISCONTINUATION-NOTICE.pdf)
 
 
@@ -101,22 +104,27 @@ REVRB-LANTERN-15 | CVE-2026-80156 | An attacker that can authenticate to the upl
 
 **By Device/Firmware Applicability:**
 
-Internal Marking | Associated CVE | SLC8000 | EMG8500/EMG7500 | SLB882 | SLCx-03 | SLCx-02
+{:.update}
+> **24 Sep 2026:** This table was updated to include SLC9000 information published by Lantronix.
+
+Internal Marking | Associated CVE | SLC9000   | SLC8000       | EMG8500/EMG7500 | SLB882 | SLCx-03/SLCx-02
 -|-|-|-|-|-|-|-
-REVRB-LANTERN-01 | CVE-2026-80143 | <v9.7.0.2 | <v9.7.0.1 | All versions | All versions | All versions
-REVRB-LANTERN-02 | CVE-2026-80144 | <v9.7.0.2 | <v9.7.0.1 | All versions | All versions | All versions
-REVRB-LANTERN-03 | CVE-2026-80145 | <v9.7.0.2 | <v9.7.0.1 | All versions | All versions | All versions
-REVRB-LANTERN-04 | CVE-2026-80146 | <v9.7.0.2 | <v9.7.0.1 | All versions | All versions | All versions
-REVRB-LANTERN-05 | CVE-2026-80147 | <v9.7.0.2 | <v9.7.0.1 | All versions | All versions | All versions
-REVRB-LANTERN-06 | CVE-2026-80148 | <v9.7.0.3 | <v9.7.0.1 | All versions | N/A | N/A
-REVRB-LANTERN-07 | CVE-2026-80149 | <v9.7.0.3 | <v9.7.0.1 | All versions | N/A | N/A
-REVRB-LANTERN-08 | CVE-2026-80150 | <v9.7.0.3 | <v9.7.0.1 | All versions | N/A | N/A
-REVRB-LANTERN-09 | CVE-2018-16789 | <v9.7.0.3 | <v9.7.0.1 | All versions | N/A | N/A
-REVRB-LANTERN-10 | CVE-2026-80151 | <v9.7.0.3 | <v9.7.0.1 | All versions | All versions | All versions
-REVRB-LANTERN-11 | CVE-2026-80152 | <v9.7.0.3 | <v9.7.0.1 | All versions | All versions | All versions
-REVRB-LANTERN-13 | CVE-2026-80154 | All versions | All versions | All versions | All versions | All versions
-REVRB-LANTERN-14 | CVE-2026-80155 | <v9.7.0.5 | <v9.7.0.1 | All versions | All versions | All versions
-REVRB-LANTERN-15 | CVE-2026-80156 | <v9.7.0.5 | <v9.7.0.1 | All versions | All versions | All versions
+REVRB-LANTERN-01 | CVE-2026-80143 | <v9.7.0.2 | <v9.7.0.2     | <v9.7.0.1 | All versions | All versions
+REVRB-LANTERN-02 | CVE-2026-80144 | <v9.7.0.2 | <v9.7.0.2     | <v9.7.0.1 | All versions | All versions
+REVRB-LANTERN-03 | CVE-2026-80145 | <v9.7.0.2 | <v9.7.0.2     | <v9.7.0.1 | All versions | All versions
+REVRB-LANTERN-04 | CVE-2026-80146 | <v9.7.0.2 | <v9.7.0.2     | <v9.7.0.1 | All versions | All versions
+REVRB-LANTERN-05 | CVE-2026-80147 | <v9.7.0.2 | <v9.7.0.2     | <v9.7.0.1 | All versions | All versions
+REVRB-LANTERN-06 | CVE-2026-80148 | <v9.7.0.2 | <v9.7.0.3     | <v9.7.0.1 | All versions | N/A         
+REVRB-LANTERN-07 | CVE-2026-80149 | <v9.7.0.2 | <v9.7.0.3     | <v9.7.0.1 | All versions | N/A         
+REVRB-LANTERN-08 | CVE-2026-80150 | <v9.7.0.2 | <v9.7.0.3     | <v9.7.0.1 | All versions | N/A         
+REVRB-LANTERN-09 | CVE-2018-16789 | N/A       | <v9.7.0.3     | <v9.7.0.1 | All versions | N/A         
+REVRB-LANTERN-10 | CVE-2026-80151 | <v9.7.0.2 | <v9.7.0.3     | <v9.7.0.1 | All versions | All versions
+REVRB-LANTERN-11 | CVE-2026-80152 | <v9.7.0.2 | <v9.7.0.3     | <v9.7.0.1 | All versions | All versions
+REVRB-LANTERN-13 | CVE-2026-80154 | Disputed* | All versions* | Disputed* | All versions | All versions
+REVRB-LANTERN-14 | CVE-2026-80155 | <v9.7.0.2 | <v9.7.0.5     | <v9.7.0.1 | All versions | All versions
+REVRB-LANTERN-15 | CVE-2026-80156 | <v9.7.0.2 | <v9.7.0.5     | <v9.7.0.1 | All versions | All versions
+
+\*: *Lantronix states that CVE-2026-80154 is patched for the SLC9000, SLC8000, EMG8500, and EMG7500 in recent updates. RE/VRb performed analysis of the patch provided for the SLC8000 and found that it was ineffective. We expect the mitigation to be the same across all devices in this family of devices.*
 
 ### Technical Details
 
@@ -167,6 +175,9 @@ Lantronix Autonomous Out-of-Band devices use a custom `shellinaboxd` to provide 
 
 
 ## Footnote Concerning the SLC9000
+
+{:.update}
+> **24 Sep 2026** As mentioned in the summary: Lantronix, in their vulnerability library, added the SLC9000 Series under "affected products" for all vulnerabilities disclosed here except for CVE-2018-16789, which we assessed was unlikely to apply to the SLC9000. Our findings concerning the SLC9000, which allowed us to seemingly correctly correlate vulnerabilities to it, remains in the article, as we feel it reflects important information regarding the research performed.
 
 It is our belief that the SLC9000 may be vulnerable to the web management portal vulnerabilities disclosed here, but we are resource-constrained from validating them. 
 
@@ -297,7 +308,7 @@ In early September, Shodan scanned an SLC9000, providing the HTML response of it
 
 The `name` properties of the changed input tags, in our research, implicate portions of code responsible for REVRB-LANTERN-13 and 14. Using code from the SLC8000, we were able to reverse the transposition on the 'name' property of the SLC8000's homepage to "S??8016-092126022547" - this maps to \<model\>-\<timestamp:MMddyyhhmmss\> (though the second and third characters of the model get overwritten). Using the same code on the 'name' property for the SLC9000, we obtain "S??9016-090726165109", indicating that code responsible for this dynamic, authentication-tied server response is consistent with shared code between the SLC8000 and SLC9000.
 
-On 18 September, Lantronix published firmware updates for the EMG7500, EMG8500, SLC8000, and SLC9000, each citing "security vulnerabilities" in their respective release notes. We do not claim to know what vulnerabilities were patched on the SLC9000.
+On 18 September, Lantronix published firmware updates for the EMG7500, EMG8500, SLC8000, and SLC9000, each citing "security vulnerabilities" in their respective release notes. ~~We do not claim to know what vulnerabilities were patched on the SLC9000.~~ *(We now know, per Lantronix's advisories stating as much)*
 
 If you own an SLC9000 and would like to coordinate further research, please reach out to research@revrb.net.
 
